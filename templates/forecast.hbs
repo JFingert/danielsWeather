@@ -1,0 +1,17 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>day</th> <th>high</th><th>low</th><th>conditions</th><th>sunrise</th><th>sunset</th>
+		</tr>
+	</thead>
+<tbody>
+
+	{{#each sevenDayForecast}}
+	<tr>
+		<td>{{date}}</td> <td>{{maxTemp}} </td> <td>{{minTemp}}</td> <td> {{summary}} </td> <td>{{sunriseDude}} </td> <td>{{sunsetDude}} </td>
+	</tr>
+	{{/each}}
+
+</tbody>	
+</table>
+

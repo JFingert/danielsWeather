@@ -1,0 +1,84 @@
+html {
+  background-color:black;
+  /*max-width: 900px;*/
+  /*background-image:
+  url("http://traveloregon.com/wp-content/uploads/2011/11/tocomshomehood_2000x700-2000x1200.jpg");
+*/}
+
+body {
+  /*max-width: 900px;*/
+  /*height: 1000px;*/
+  margin: 20px auto;
+  /*background:#352c35 url('http://traveloregon.com/wp-content/uploads/2011/11/tocomshomehood_2000x700-2000x1200.jpg') 
+  center 20px no-repeat;background-size:100% auto;*/
+  max-width: 1500px
+}
+
+.nav {
+  font-size: 65px;
+}
+
+#Daniel {
+  font-size: 50px;
+  color: rgb(128, 128, 128);
+}
+
+.active{
+	color: grey;
+}
+
+#current {
+  font-size: 50px;
+}
+
+#forecast {
+  font-size: 30px;
+}
+
+#quotes {
+  
+}
+
+  .slidingQuotes {
+    height: 20px;
+    background: transparent;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: slider;
+    /*-webkit-animation-iteration-count: one;*/
+    /*-webkit-animation-direction: alternate;*/
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  @-webkit-keyframes slider {
+    from {
+      margin-left: 2000px;
+    }
+
+    to {
+      margin-left: 20px;
+    }
+  }
+
+  .leavingQuotes {
+    height: 20px;
+    background: transparent;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: leaver;
+    /*-webkit-animation-iteration-count: one;*/
+    /*-webkit-animation-direction: alternate;*/
+    -webkit-animation-timing-function: ease-in-out;
+  }
+
+  @-webkit-keyframes leaver {
+    from {
+      margin-left: 20px;
+    }
+
+    to {
+      margin-left: -2000px;
+    }
+  }
+/*
+.panel {
+  background-color: #646464;
+}*/

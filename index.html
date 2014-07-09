@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!-- beefy js/app.js:bundle.js -.-live -->
+<html><!-- app.models.currentWeather.attributes -->
+<head>
+  <title>Weather Forecast</title>
+  <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/lib/underscore.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+  <script type="text/javascript" src="js/lib/backbone.js"></script>
+  <script type="text/javascript" src="js/lib/bootstrap.js"></script>
+  <script type="text/javascript" src="bundle.js"></script>
+</head>
+
+<body class="container-fluid">
+  <div id="Daniel">Daniel's Forecast</div>
+ 
+  <div class="panel panel-default">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#current" data-toggle="tab">Current</a></li>
+      <li><a href="#details" data-toggle="tab">Details</a></li>
+      <li><a href="#forecast" data-toggle="tab">Forecast</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    
+    <div class="tab-content" class="tabs">
+      <div class="tab-pane fade in active" id="current">a</div>
+      <div class="tab-pane fade" id="details" >b</div>
+      <div class="tab-pane fade" id="forecast">c</div>
+    </div> 
+    <div id="quotes"></div>
+  </div> 
+
+ 
+
+
+
+
+  <script>
+
+
+
+
+    function quoteSlider(num) {
+
+      var array = [
+        '<img src="images/images-0.jpg">',
+        '<img src="images/images-1.jpg">',
+        '<img src="images/images-2.jpg">',
+        '<img src="images/images-3.jpg">',
+        '<img src="images/images-4.jpg">',
+        '<img src="images/images-5.jpg">',
+        '<img src="images/images-6.jpg">',
+        '<img src="images/images-7.jpg">'
+      ];
+
+
+      $("#quotes").html(array[num]).addClass('slidingQuotes'); 
+      setTimeout(function(){
+        sliderRemove(num);
+      }, 5000); 
+    };
+
+    function sliderRemove(num) {
+      $("#quotes").removeClass('slidingQuotes').addClass('leavingQuotes'); 
+      setTimeout(function(){
+        numHandler(num);
+      }, 1000);
+    };
+
+    function numHandler(val) {
+
+      $("#quotes").removeClass(); 
+
+      if(val < 8){
+        val++;
+      } else {
+        val = 0;
+      }
+      quoteSlider(val);
+    };
+
+    $( document ).ready(function() {
+      numHandler(0);
+    });
+
+    
+    </script>
+
+
+
+
+</body>
+</html>
