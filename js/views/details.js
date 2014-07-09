@@ -13,7 +13,7 @@ var DetailView = Backbone.View.extend({
 	    context.currently = this.model.get('currently') || {};
 	    context.today = this.model.get('daily') || {};
 	    this.$el.html(this.template(context));
-	    console.log(context.today);
+	    console.log(context);
 	    return this;
 	  }
 

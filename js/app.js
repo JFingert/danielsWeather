@@ -10,6 +10,8 @@ $(function () { // beefy js/app.js:bundle.js --live
 	app.views = {};
 	app.models = {};
 
+	var geocoder;
+
 //Geolocation
 function success(position) {
 	var latitude  = position.coords.latitude;
